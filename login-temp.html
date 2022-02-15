@@ -1,0 +1,48 @@
+
+<style type="text/css">
+*{
+	padding:5px;
+	margin: 5px;
+	font-size: 16px;
+}
+
+.container{
+	width: 315px;
+	height: 250px;
+	background: linear-gradient(40deg, gray, silver, gray);
+	border-radius: 0 30px 0 30px;
+	box-shadow: 10px 10px 20px #444;
+	filter: blur(3px);
+	z-index: -1;
+	top: 0;
+	left: 0;
+	position:absolute;
+}
+
+
+input:required{
+	border: 3px solid blue;
+	outline: none;
+	display: block;
+}
+.required:after{
+	content: ' *';
+	color: red;
+}
+
+input:required:invalid{
+	border: 3px solid red;
+}
+
+</style>
+<div class="container"></div>
+
+<form method="" >
+<div class="required">User id</div>
+<input type="text" class="form-control" required placeholder="email or user id">
+
+<div class="required">Password</div>
+<input type="password" class="form-control" minlength="8"  required placeholder="Password">
+
+<input type="submit" value="Login">
+</form>
